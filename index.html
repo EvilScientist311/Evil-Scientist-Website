@@ -7,7 +7,7 @@ title: Home
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img
-        src="/assets/img/labpic.png"
+        src="{{ '/assets/img/labpic.png' | relative_url }}"
         class="shadow-lg d-block mx-lg-auto img-fluid rounded-5"
         alt="Lab photo"
         width="700"
@@ -22,14 +22,12 @@ title: Home
       <p class="lead">
         Welcome to the website I've created. It serves as a knowledge dump
         of concepts and projects ranging from physics derivations to Python
-        projects. Feel free to explore using the navigation menu above, and
-        feel free to reach out.
+        projects. Feel free to explore using the navigation menu above.
       </p>
 
       <a href="https://www.linkedin.com/in/coreyanderson311/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
         <i class="bi bi-linkedin"></i> My LinkedIn
       </a>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
     </div>
   </div>
 </div>
@@ -38,81 +36,42 @@ title: Home
   <h2 class="pb-2 border-bottom mb-4">A Guide to My Website</h2>
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
+
     <div class="feature col zoom-hover">
-      <a href="/papers.html" class="text-decoration-none text-reset d-block h-100">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="/assets/svg/atom.svg" alt="atom" height="40" class="invert-white" />
+      <a href="{{ '/papers.html' | relative_url }}" class="text-decoration-none text-reset d-block h-100">
+        <div class="feature-icon">
+          <img src="{{ '/assets/svg/atom.svg' | relative_url }}" height="40" />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Derivations</h3>
-        <p>
-          Concise derivations of concepts and equations that I find interesting,
-          from seemingly faster-than-light travel to the fundamental
-          symmetries of our universe.
-        </p>
+        <h3>Derivations</h3>
       </a>
     </div>
 
     <div class="feature col zoom-hover">
-      <a href="/simulations.html" class="text-decoration-none text-reset d-block h-100">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="/assets/svg/python.svg" alt="python" height="40" class="invert-white" />
+      <a href="{{ '/data_science.html' | relative_url }}" class="text-decoration-none text-reset d-block h-100">
+        <div class="feature-icon">
+          <img src="{{ '/assets/svg/data.svg' | relative_url }}" height="40" />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Simulations</h3>
-        <p>
-          Python simulations of interesting physical phenomena. The
-          mathematical foundations of the concepts and the corresponding
-          Python code are included on each page.
-        </p>
+        <h3>Data Science</h3>
       </a>
     </div>
 
     <div class="feature col zoom-hover">
-      <a href="/data_science.html" class="text-decoration-none text-reset d-block h-100">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="/assets/svg/data.svg" alt="data science" height="40" class="invert-white" />
+      <a href="{{ '/lab_reports.html' | relative_url }}" class="text-decoration-none text-reset d-block h-100">
+        <div class="feature-icon">
+          <img src="{{ '/assets/svg/report.svg' | relative_url }}" height="40" />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Data Science</h3>
-        <p>
-          Here are my projects involving data analysis. The Cleo project is my
-          largest one so far.
-        </p>
+        <h3>Lab Reports</h3>
       </a>
     </div>
 
     <div class="feature col zoom-hover">
-      <a href="/lab_reports.html" class="text-decoration-none text-reset d-block h-100">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="/assets/svg/report.svg" alt="report" height="40" class="invert-white" />
+      <a href="{{ '/electrical_engineering.html' | relative_url }}" class="text-decoration-none text-reset d-block h-100">
+        <div class="feature-icon">
+          <img src="{{ '/assets/svg/electric.svg' | relative_url }}" height="40" />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Lab Reports</h3>
-        <p>
-          Lab reports from selected projects and experiments.
-        </p>
+        <h3>Electrical Engineering</h3>
       </a>
     </div>
 
-    <div class="feature col zoom-hover">
-      <a href="/electrical_engineering.html" class="text-decoration-none text-reset d-block h-100">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="/assets/svg/electric.svg" alt="electrical engineering" height="40" class="invert-white" />
-        </div>
-        <h3 class="fs-2 text-body-emphasis">Electrical Engineering</h3>
-        <p>
-          Here are my electrical engineering projects and related work.
-        </p>
-      </a>
-    </div>
-
-    <div class="feature col zoom-hover">
-      <a href="/contact.html" class="text-decoration-none text-reset d-block h-100">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="/assets/svg/contact.svg" alt="contact" height="40" class="invert-white" />
-        </div>
-        <h3 class="fs-2 text-body-emphasis">Contact Me</h3>
-        <p>
-          Contact me if you have any questions, comments, or suggestions.
-        </p>
-      </a>
-    </div>
   </div>
 </div>
