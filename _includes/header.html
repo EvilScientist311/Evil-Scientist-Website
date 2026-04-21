@@ -1,33 +1,11 @@
-<head>
-  <style>
-    .dropdown-menu .dropdown-item:hover {
-      background-color: #e0f0ff;
-      color: #000;
-    }
-    .dropdown-menu.fade {
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      transform: translateY(10px);
-      opacity: 0;
-      display: block;
-      visibility: hidden;
-    }
-
-    .dropdown-menu.fade.show {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-  </style>
-</head>
 <nav
   class="navbar navbar-expand border-bottom align-items-center"
   style="background-color: #c7c6ff"
 >
   <div class="container-fluid">
-    <!-- Brand (Corey's Website) -->
-    <a class="navbar-brand d-flex align-items-center text-start d-none d-sm-inline" href="/">
+    <a class="navbar-brand d-flex align-items-center text-start d-none d-sm-inline" href="{{ '/' | relative_url }}">
       <img
-        src="{{ url_for('static', filename='svg/rocket-takeoff.svg')}}"
+        src="{{ '/assets/svg/rocket-takeoff.svg' | relative_url }}"
         alt="rocket"
         height="30"
         class="me-2"
@@ -35,7 +13,6 @@
       <span class="fs-4 fw-bold d-none d-sm-inline">Corey's Website</span>
     </a>
 
-    <!-- Navigation Links -->
     <div
       class="collapse navbar-collapse justify-content-end align-items-center d-flex"
       id="navbarContent"
@@ -43,17 +20,16 @@
       <ul class="navbar-nav text-end align-items-center">
         <li class="nav-item me-2">
           <a
-            class="btn {% if current_path == 'home' %}btn-primary{% endif %}"
-            href="{{ url_for('home') }}"
+            class="btn {% if page.url == '/' or page.url == '/index.html' %}btn-primary{% endif %}"
+            href="{{ '/' | relative_url }}"
             role="button"
-            >Home</a
-          >
+          >Home</a>
         </li>
 
         <li class="nav-item me-2">
           <div class="dropdown">
             <button
-              class="btn dropdown-toggle {% if current_path in ['papers', 'sub_papers', 'simulations', 'data_science', 'lab_reports', 'electrical_engineering'] %}btn-primary{% endif %}"
+              class="btn dropdown-toggle {% if page.url == '/papers.html' or page.url contains '/sub_papers/' or page.url == '/data_science.html' or page.url == '/lab_reports.html' or page.url == '/electrical_engineering.html' %}btn-primary{% endif %}"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -62,42 +38,27 @@
             </button>
             <ul class="dropdown-menu fade">
               <li>
-                <a class="dropdown-item" href="{{ url_for('papers') }}"
-                  >Derivations</a
-                >
+                <a class="dropdown-item" href="{{ '/papers.html' | relative_url }}">Derivations</a>
               </li>
               <li>
-                <a class="dropdown-item" href="{{ url_for('simulations') }}"
-                  >Simulations</a
-                >
+                <a class="dropdown-item" href="{{ '/data_science.html' | relative_url }}">Data Science</a>
               </li>
               <li>
-                <a class="dropdown-item" href="{{ url_for('data_science') }}"
-                  >Data Science</a
-                >
+                <a class="dropdown-item" href="{{ '/lab_reports.html' | relative_url }}">Lab Reports</a>
               </li>
               <li>
-                <a class="dropdown-item" href="{{ url_for('lab_reports') }}"
-                  >Lab Reports</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="{{ url_for('electrical_engineering') }}"
-                  >Electronics
-                </a>
+                <a class="dropdown-item" href="{{ '/electrical_engineering.html' | relative_url }}">Electronics</a>
               </li>
             </ul>
           </div>
         </li>
+
         <li class="nav-item">
           <a
-            class="btn {% if current_path == 'contact' %}btn-primary{% endif %}"
-            href="{{ url_for('contact') }}"
+            class="btn {% if page.url == '/contact.html' %}btn-primary{% endif %}"
+            href="{{ '/contact.html' | relative_url }}"
             role="button"
-            >Contact Me</a
-          >
+          >Contact Me</a>
         </li>
       </ul>
     </div>
