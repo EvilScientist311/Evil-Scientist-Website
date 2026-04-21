@@ -1,0 +1,105 @@
+<head>
+  <style>
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #e0f0ff;
+      color: #000;
+    }
+    .dropdown-menu.fade {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(10px);
+      opacity: 0;
+      display: block;
+      visibility: hidden;
+    }
+
+    .dropdown-menu.fade.show {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<nav
+  class="navbar navbar-expand border-bottom align-items-center"
+  style="background-color: #c7c6ff"
+>
+  <div class="container-fluid">
+    <!-- Brand (Corey's Website) -->
+    <a class="navbar-brand d-flex align-items-center text-start d-none d-sm-inline" href="/">
+      <img
+        src="{{ url_for('static', filename='svg/rocket-takeoff.svg')}}"
+        alt="rocket"
+        height="30"
+        class="me-2"
+      />
+      <span class="fs-4 fw-bold d-none d-sm-inline">Corey's Website</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <div
+      class="collapse navbar-collapse justify-content-end align-items-center d-flex"
+      id="navbarContent"
+    >
+      <ul class="navbar-nav text-end align-items-center">
+        <li class="nav-item me-2">
+          <a
+            class="btn {% if current_path == 'home' %}btn-primary{% endif %}"
+            href="{{ url_for('home') }}"
+            role="button"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item me-2">
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle {% if current_path in ['papers', 'sub_papers', 'simulations', 'data_science', 'lab_reports', 'electrical_engineering'] %}btn-primary{% endif %}"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              STEM
+            </button>
+            <ul class="dropdown-menu fade">
+              <li>
+                <a class="dropdown-item" href="{{ url_for('papers') }}"
+                  >Derivations</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ url_for('simulations') }}"
+                  >Simulations</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ url_for('data_science') }}"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ url_for('lab_reports') }}"
+                  >Lab Reports</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('electrical_engineering') }}"
+                  >Electronics
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="btn {% if current_path == 'contact' %}btn-primary{% endif %}"
+            href="{{ url_for('contact') }}"
+            role="button"
+            >Contact Me</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
