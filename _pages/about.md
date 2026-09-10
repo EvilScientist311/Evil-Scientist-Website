@@ -1,9 +1,9 @@
 ---
 permalink: /
 title: "Welcome!"
-description: "I love learning new things. On this site are some of the things I've done including derivations, lab reports, data analysis projects, and electrical engineering work."
+description: "Click the links above to explore my derivations, lab reports, data analysis projects, and electrical engineering work."
 author_profile: true
-excerpt: "I love learning new things. On this site are some of the things I've done including derivations, lab reports, data analysis projects, and electrical engineering work."
+excerpt: "Click the links above to explore my derivations, lab reports, data analysis projects, and electrical engineering work."
 header:
   overlay_image: img/labpic.jpg
   overlay_filter: 0.35
@@ -50,12 +50,23 @@ header:
     </div>
     <ol class="home-timeline__list">
       <li class="home-timeline__item">
+        <p class="home-timeline__year">2026–Present</p>
+        <div class="home-timeline__node" aria-hidden="true"><span class="home-timeline__node-dot"></span></div>
+        <article class="home-timeline__card">
+          <span class="home-timeline__pill">Internship</span>
+          <h3 class="home-timeline__title">Grid-Connection Engineering Internship — Sungrow</h3>
+          <p class="home-timeline__desc">Working on utility-scale grid-connected BESS modelling and harmonic assessments using DIgSILENT PowerFactory and Python. The work covers PCS/inverters, transformers, MV collector networks and grid connections; frequency-dependent Norton equivalents, manufacturer harmonic-current spectra and impedance polygons; charge, discharge, zero-power and outage scenarios; automated study workflows; validation against established results; and investigation of discrepancies including transformer saturation.</p>
+        </article>
+      </li>
+      <li class="home-timeline__item">
         <p class="home-timeline__year">2026</p>
         <div class="home-timeline__node" aria-hidden="true"><span class="home-timeline__node-dot"></span></div>
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Research</span>
           <h3 class="home-timeline__title">Quantum Backscatter Communications — Honours Thesis</h3>
           <p class="home-timeline__desc">Thesis: <em>Modulation Design for Quantum Backscatter Communications: Performance Analysis and Optimisation</em>. Research findings submitted to IEEE GLOBECOM 2026 (Quantum Communications and IT Symposium).</p>
+          <p class="home-timeline__desc home-timeline__desc--separated"><strong><u>Description:</u></strong><br>Developed a more realistic bit-error-rate model for polarisation-encoded QBC beyond the ideal thermal-bath assumption. Derived and numerically validated analytical models for polarisation rotation, temporal misalignment and pointing jitter, combined them into a unified impairment framework, and optimised pulse width and signal brightness under data-rate and resource constraints. The results identified rotation and pointing jitter as the dominant impairments in the baseline regime and established robust operating regions for practical system design.</p>
+          <a class="home-timeline__link" href="{{ '/files/papers/qbc-paper.pdf' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i>Read QBC paper</a>
         </article>
       </li>
       <li class="home-timeline__item">
@@ -73,7 +84,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Teaching</span>
           <h3 class="home-timeline__title">Head Tutor: Quantum Physics</h3>
-          <p class="home-timeline__desc">Ran tutorials for PHYS2111 Quantum Physics, designed tutorial questions and learning resources.</p>
+          <p class="home-timeline__desc">Taught PHYS2111 Quantum Physics classes by leading tutorials and developing tutorial questions and learning resources. The course covered Hilbert spaces, bras and kets, operators, eigenvalues and measurement; spin-½ systems and Pauli matrices; entanglement, commutators and uncertainty; Schrödinger's equation, potential wells and the quantum harmonic oscillator; time evolution, Fourier methods, tunnelling and periodic potentials.</p>
         </article>
       </li>
       <li class="home-timeline__item">
@@ -82,7 +93,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Teaching</span>
           <h3 class="home-timeline__title">Lab Demonstrator: Quantum Mechanics and Classical Mechanics/Special Relativity</h3>
-          <p class="home-timeline__desc">Taught PHYS3111 and PHYS2113 laboratory classes and marked student reports.</p>
+          <p class="home-timeline__desc">Supervised laboratory experiments and assessed reports for PHYS3111 Quantum Mechanics and PHYS2113 Classical Mechanics and Special Relativity. PHYS3111 covered three-dimensional quantum mechanics, angular momentum, the hydrogen atom, spin and identical particles, perturbation theory, band structure, Berry phase and scattering. PHYS2113 covered driven oscillations and resonance, central-force motion, rotational dynamics, Lagrangian and Hamiltonian mechanics, Noether's theorem, coupled modes, Lorentz transformations and relativistic dynamics.</p>
         </article>
       </li>
       <li class="home-timeline__item">
@@ -91,7 +102,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Research</span>
           <h3 class="home-timeline__title">Silicon Quantum Dot Qubit Research Project</h3>
-          <p class="home-timeline__desc">Simulated silicon quantum dot qubits using NEMO3D, Gadi, Python, and MATLAB.</p>
+          <p class="home-timeline__desc">Completed a UNSW research project supervised by Professor Rajib Rahman, investigating few-electron physics in gate-defined silicon quantum dots. Modelled lateral confinement using a quantum harmonic-oscillator potential and examined how quantised energy levels, orbital wavefunctions and electron–electron interactions evolved as the dots were filled from one to three electrons. Used NEMO3D on the Gadi supercomputer to run atomistic self-consistent-field calculations; varied XML model parameters, extracted energy eigenvalues and wavefunction slices, checked numerical convergence and analysed the spatial spreading of the wavefunctions with increasing electron number.</p>
         </article>
       </li>
       <li class="home-timeline__item">
@@ -99,8 +110,8 @@ header:
         <div class="home-timeline__node" aria-hidden="true"><span class="home-timeline__node-dot"></span></div>
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Teaching</span>
-          <h3 class="home-timeline__title">Physics Teaching Assistant and Lab Demonstrator</h3>
-          <p class="home-timeline__desc">Taught and marked first-year physics tutorials and laboratories.</p>
+          <h3 class="home-timeline__title">Physics 1A and 1B Teaching Assistant and Lab Demonstrator</h3>
+          <p class="home-timeline__desc">Taught and assessed tutorials and laboratories for UNSW Physics 1A (PHYS1121) and Physics 1B (PHYS1221). Physics 1A covered one-, two- and three-dimensional kinematics; Newtonian dynamics; work, energy, momentum and collisions; rotational motion; temperature, kinetic theory, ideal gases, heat and the first law of thermodynamics; oscillations, wave motion and sound. Physics 1B covered electrostatics, Gauss's law, electric potential, capacitance and dielectrics; magnetic fields, Ampère's law, the Biot–Savart law, Faraday's law, induction and inductance; physical optics, interference, diffraction, gratings, spectra and polarisation; introductory quantum theory, wave–particle duality, and solid-state and semiconductor physics.</p>
         </article>
       </li>
       <li class="home-timeline__item">

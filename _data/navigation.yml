@@ -7,12 +7,16 @@
 main:
   - title: "Physics"
     url: /derivations/
+    icon: "fa-solid fa-atom"
 
   - title: "Lab Reports"
     url: /lab-reports/
+    icon: "fa-solid fa-flask"
 
   - title: "Data Analysis"
     url: /data-science/
+    icon: "fa-solid fa-chart-line"
 
   - title: "Electrical Engineering"
     url: /electrical-engineering/
+    icon: "fa-solid fa-bolt"
