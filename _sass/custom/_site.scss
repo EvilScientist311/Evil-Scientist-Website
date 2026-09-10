@@ -112,14 +112,14 @@ $page-nav-control-radius: 0.68rem;
 }
 
 .masthead .greedy-nav .masthead__nav-cluster-list > .masthead__nav-link:not(.selected) > a {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .masthead .greedy-nav .masthead__nav-cluster-list > .masthead__nav-link > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.42rem;
+  gap: 0.65rem;
   min-height: $page-nav-control-height;
   margin: 0;
   padding: 0 0.85rem;
@@ -154,7 +154,7 @@ $page-nav-control-radius: 0.68rem;
     0 4px 10px color-mix(in srgb, var(--global-link-color) 22%, transparent),
     inset 0 1px 0 color-mix(in srgb, #fff 20%, transparent);
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .masthead__nav-icon {
@@ -261,7 +261,7 @@ $page-nav-control-radius: 0.68rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.42rem;
+    gap: 0.65rem;
     width: auto;
     max-width: 100%;
     min-height: $page-nav-control-height;
@@ -273,7 +273,7 @@ $page-nav-control-radius: 0.68rem;
     border-radius: $page-nav-control-radius;
     background: color-mix(in srgb, var(--global-text-color) 7%, var(--global-bg-color));
     box-shadow: 0 1px 2px color-mix(in srgb, var(--global-text-color) 8%, transparent);
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
     box-sizing: border-box;
     white-space: nowrap;
@@ -304,7 +304,7 @@ $page-nav-control-radius: 0.68rem;
         0 4px 10px color-mix(in srgb, var(--global-link-color) 22%, transparent),
         inset 0 1px 0 color-mix(in srgb, #fff 20%, transparent);
       color: #fff;
-      font-weight: 700;
+      font-weight: 600;
       pointer-events: none;
       cursor: default;
     }
@@ -806,7 +806,7 @@ body.page-not-home #main > .archive {
 }
 
 .page__content .home-timeline__desc--separated {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Physics topic cards */
@@ -1244,7 +1244,7 @@ body.mobile-nav-open::before {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.42rem;
+    gap: 0.65rem;
     box-sizing: border-box;
     min-height: $page-nav-control-height-mobile;
     height: $page-nav-control-height-mobile;
@@ -1255,7 +1255,7 @@ body.mobile-nav-open::before {
     text-overflow: ellipsis;
     white-space: nowrap;
     color: var(--global-masthead-link-color);
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: none;
 
     &:hover {
@@ -1302,7 +1302,7 @@ body.mobile-nav-open::before {
         0 4px 10px color-mix(in srgb, var(--global-link-color) 22%, transparent),
         inset 0 1px 0 color-mix(in srgb, #fff 20%, transparent);
       color: #fff;
-      font-weight: 700;
+      font-weight: 600;
       pointer-events: none;
       cursor: default;
     }
