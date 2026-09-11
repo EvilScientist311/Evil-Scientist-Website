@@ -102,6 +102,50 @@
   opacity: 1;
 }
 
+@keyframes site-page-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes site-page-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+::view-transition-old(root) {
+  animation: site-page-fade-out 320ms ease both;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  animation: site-page-fade-in 320ms ease both;
+  mix-blend-mode: normal;
+}
+
+::view-transition-group(site-masthead),
+::view-transition-old(site-masthead),
+::view-transition-new(site-masthead) {
+  animation: none;
+}
+
+::view-transition-old(site-masthead) {
+  opacity: 0;
+}
+
+::view-transition-new(site-masthead) {
+  opacity: 1;
+}
+
 /* Footer bar removed — reserve masthead offset in CSS to avoid JS layout shift */
 body {
   padding-top: $masthead-height !important;
@@ -113,6 +157,7 @@ body {
   min-height: $masthead-height;
   box-sizing: border-box;
   overflow: visible;
+  view-transition-name: site-masthead;
 }
 
 .masthead__inner-wrap {

@@ -180,14 +180,7 @@
         return;
       }
 
-      var fadeOut = reducedMotion.matches
-        ? Promise.resolve()
-        : currentContent.animate(
-            [{ opacity: 1 }, { opacity: 0 }],
-            { duration: 180, easing: "ease", fill: "forwards" }
-          ).finished;
-
-      fadeOut.then(function () {
+      function replaceContent() {
         currentContent.innerHTML = nextContent.innerHTML;
         document.title = nextDocument.title;
         document.body.className = nextDocument.body.className;
@@ -214,16 +207,6 @@
         }
 
         window.scrollTo(0, 0);
-        currentContent.getAnimations().forEach(function (animation) {
-          animation.cancel();
-        });
-
-        if (!reducedMotion.matches) {
-          currentContent.animate(
-            [{ opacity: 0 }, { opacity: 1 }],
-            { duration: 300, easing: "ease", fill: "both" }
-          );
-        }
 
         if (window.initSiteAnimations) {
           window.initSiteAnimations({ immediate: true });
@@ -232,13 +215,23 @@
         if (window.initHomeTimeline) {
           window.initHomeTimeline();
         }
+      }
 
+      function finishTransition() {
         if (window.MathJax && window.MathJax.typesetPromise) {
           window.MathJax.typesetPromise([currentContent]);
         }
 
         navigating = false;
-      });
+      }
+
+      if (document.startViewTransition && !reducedMotion.matches) {
+        document.startViewTransition(replaceContent).finished.then(finishTransition, finishTransition);
+        return;
+      }
+
+      replaceContent();
+      finishTransition();
     }
 
     function navigate(url, link, pushState) {
