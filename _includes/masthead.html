@@ -61,6 +61,7 @@
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     var navigating = false;
     var pageCache = {};
+    var preparedPageCache = {};
 
     if (!nav || !active) {
       return;
@@ -121,6 +122,51 @@
       }
 
       return pageCache[url];
+    }
+
+    function preloadImages(html, url) {
+      var parser = new DOMParser();
+      var nextDocument = parser.parseFromString(html, "text/html");
+      var sources = Array.prototype.map.call(
+        nextDocument.querySelectorAll("#site-content img[src]"),
+        function (image) {
+          return new URL(image.getAttribute("src"), url).href;
+        }
+      );
+
+      return Promise.all(sources.map(function (source) {
+        return new Promise(function (resolve) {
+          var image = new Image();
+
+          image.onload = function () {
+            if (image.decode) {
+              image.decode().catch(function () {}).then(resolve);
+              return;
+            }
+
+            resolve();
+          };
+          image.onerror = resolve;
+          image.src = source;
+        });
+      })).then(function () {
+        return html;
+      });
+    }
+
+    function preparePage(url) {
+      if (!preparedPageCache[url]) {
+        preparedPageCache[url] = fetchPage(url)
+          .then(function (html) {
+            return preloadImages(html, url);
+          })
+          .catch(function (error) {
+            delete preparedPageCache[url];
+            throw error;
+          });
+      }
+
+      return preparedPageCache[url];
     }
 
     function updatePage(html, url, link, pushState) {
@@ -202,7 +248,7 @@
       link.parentElement.classList.add("is-slide-target");
       placeSlider(link);
 
-      Promise.all([fetchPage(url), wait(320)])
+      Promise.all([preparePage(url), wait(320)])
         .then(function (results) {
           updatePage(results[0], url, link, pushState);
         })
@@ -225,7 +271,7 @@
       });
 
       link.addEventListener("mouseenter", function () {
-        fetchPage(link.href).catch(function () {});
+        preparePage(link.href).catch(function () {});
       }, { once: true });
     });
 

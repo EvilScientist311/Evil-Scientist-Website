@@ -25,14 +25,20 @@ window.initHomeTimeline = function () {
     return;
   }
 
-  timeline.classList.add("home-timeline--enhanced");
-
   var prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
   var triggerRatio = 0.7;
   var lastIndex = items.length - 1;
   var pageLoadScrollY = getScrollY();
+
+  items.forEach(function (item) {
+    if (item.getBoundingClientRect().top < window.innerHeight * 0.95) {
+      item.classList.add("is-visible", "is-revealed");
+    }
+  });
+
+  timeline.classList.add("home-timeline--enhanced");
 
   function clamp(value, min, max) {
     return Math.min(max, Math.max(min, value));
