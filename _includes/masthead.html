@@ -68,10 +68,19 @@
     function placeSlider(link) {
       var navRect = nav.getBoundingClientRect();
       var linkRect = link.getBoundingClientRect();
+      var left = linkRect.left - navRect.left;
+      var width = linkRect.width;
 
-      nav.style.setProperty("--nav-slider-left", linkRect.left - navRect.left + "px");
+      if (link.parentElement === nav.firstElementChild) {
+        left = 0;
+        width = linkRect.right - navRect.left;
+      } else if (link.parentElement === nav.lastElementChild) {
+        width = navRect.right - linkRect.left;
+      }
+
+      nav.style.setProperty("--nav-slider-left", left + "px");
       nav.style.setProperty("--nav-slider-top", "0px");
-      nav.style.setProperty("--nav-slider-width", linkRect.width + "px");
+      nav.style.setProperty("--nav-slider-width", width + "px");
       nav.style.setProperty("--nav-slider-height", navRect.height + "px");
       nav.style.setProperty("--nav-slider-radius", window.getComputedStyle(link).borderRadius);
     }

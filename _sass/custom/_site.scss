@@ -208,7 +208,7 @@ $page-nav-control-radius: 0.68rem;
   padding: 0;
   border: 1px solid color-mix(in srgb, var(--global-text-color) 14%, var(--global-border-color));
   border-radius: calc(#{$page-nav-control-radius} + 0.2rem);
-  background: color-mix(in srgb, var(--global-text-color) 8%, var(--global-bg-color));
+  background: color-mix(in srgb, var(--global-text-color) 12%, var(--global-bg-color));
   box-shadow: 0 3px 12px color-mix(in srgb, var(--global-text-color) 8%, transparent);
   overflow: hidden;
   list-style: none;
@@ -236,6 +236,10 @@ $page-nav-control-radius: 0.68rem;
   font-weight: 600;
 }
 
+.masthead .greedy-nav .masthead__nav-cluster-list > .masthead__nav-link {
+  background: transparent !important;
+}
+
 .masthead .greedy-nav .masthead__nav-cluster-list > .masthead__nav-link > a {
   position: relative;
   z-index: 1;
@@ -248,7 +252,7 @@ $page-nav-control-radius: 0.68rem;
   padding: 0 0.85rem;
   border: 0;
   border-radius: 0;
-  background: color-mix(in srgb, var(--global-text-color) 8%, var(--global-bg-color));
+  background: color-mix(in srgb, var(--global-text-color) 12%, var(--global-bg-color));
   box-shadow: none;
   box-sizing: border-box;
   transition:
