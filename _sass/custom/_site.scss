@@ -1,60 +1,5 @@
 /* Site-specific UI overrides */
 
-@view-transition {
-  navigation: auto;
-}
-
-@keyframes page-transition-out {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes page-transition-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-::view-transition-image-pair(root) {
-  isolation: auto;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-  animation: 260ms linear both page-transition-out;
-  mix-blend-mode: plus-lighter;
-}
-
-::view-transition-new(root) {
-  z-index: 2;
-  animation: 260ms linear both page-transition-in;
-  mix-blend-mode: plus-lighter;
-}
-
-::view-transition-group(site-masthead) {
-  z-index: 3;
-  animation: none;
-}
-
-::view-transition-old(site-masthead) {
-  animation: none;
-  opacity: 0;
-}
-
-::view-transition-new(site-masthead) {
-  animation: none;
-  opacity: 1;
-}
-
 /* Homepage hero fade-in */
 @keyframes home-fade-up {
   from {
@@ -130,12 +75,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation-duration: 1ms !important;
-  }
-
   .page-home .page__hero--overlay .wrapper,
   .page-home .main--with-hero .sidebar,
   .page-home .home-metrics,
@@ -159,6 +98,10 @@
   opacity: 1 !important;
 }
 
+#site-content {
+  opacity: 1;
+}
+
 /* Footer bar removed — reserve masthead offset in CSS to avoid JS layout shift */
 body {
   padding-top: $masthead-height !important;
@@ -170,7 +113,6 @@ body {
   min-height: $masthead-height;
   box-sizing: border-box;
   overflow: visible;
-  view-transition-name: site-masthead;
 }
 
 .masthead__inner-wrap {

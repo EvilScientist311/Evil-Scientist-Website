@@ -1,5 +1,11 @@
-(function () {
+window.initSiteAnimations = function () {
   "use strict";
+
+  document.body.classList.remove("home-enter-active", "home-enter-done");
+
+  if (window.siteEnterTimeout) {
+    window.clearTimeout(window.siteEnterTimeout);
+  }
 
   var prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -20,7 +26,7 @@
       document.body.classList.add("home-enter-active");
     });
 
-    window.setTimeout(function () {
+    window.siteEnterTimeout = window.setTimeout(function () {
       document.body.classList.add("home-enter-done");
     }, 1200);
   }
@@ -112,4 +118,6 @@
 
   initHeroEnter();
   initMetricsCountUp();
-})();
+};
+
+window.initSiteAnimations();

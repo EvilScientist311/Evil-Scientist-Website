@@ -1,4 +1,4 @@
-(function () {
+window.initHomeTimeline = function () {
   "use strict";
 
   /*
@@ -279,5 +279,6 @@
   bindImageLoadUpdates();
   bindFontLoadUpdates();
   updateTimeline();
-})();
+};
 
+window.initHomeTimeline();
