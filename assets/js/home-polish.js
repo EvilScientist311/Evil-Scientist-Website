@@ -1,6 +1,7 @@
-window.initSiteAnimations = function () {
+window.initSiteAnimations = function (options) {
   "use strict";
 
+  var immediate = options && options.immediate;
   document.body.classList.remove("home-enter-active", "home-enter-done");
 
   if (window.siteEnterTimeout) {
@@ -17,7 +18,7 @@ window.initSiteAnimations = function () {
   }
 
   function initHeroEnter() {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || immediate) {
       document.body.classList.add("home-enter-active", "home-enter-done");
       return;
     }
@@ -33,7 +34,7 @@ window.initSiteAnimations = function () {
 
   function initMetricsCountUp() {
     var section = document.querySelector(".home-metrics");
-    if (!section) {
+    if (!section || immediate) {
       return;
     }
 
