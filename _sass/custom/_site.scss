@@ -1656,7 +1656,7 @@ body.mobile-nav-open::before {
     display: flex;
     align-items: center;
     flex: 0 0 auto;
-    margin-left: auto;
+    margin-left: 0;
     gap: 0.5rem;
     overflow: visible;
   }
@@ -1689,6 +1689,7 @@ body.mobile-nav-open::before {
   .masthead .greedy-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     gap: 1rem;
     overflow: visible;
@@ -1697,7 +1698,7 @@ body.mobile-nav-open::before {
   .masthead .greedy-nav .visible-links {
     display: flex;
     align-items: center;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     min-width: 0;
     width: auto;
     margin: 0;
@@ -1730,7 +1731,7 @@ body.mobile-nav-open::before {
   }
 
   .masthead .greedy-nav .visible-links .masthead__nav-cluster {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     display: flex;
     justify-content: center;
     min-width: 0;
