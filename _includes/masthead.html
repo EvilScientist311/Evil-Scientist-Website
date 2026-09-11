@@ -4,11 +4,11 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist masthead__brand">
-            <a href="{{ base_path }}/"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}><i class="fa-solid fa-house masthead__nav-icon" aria-hidden="true"></i><span>{{ site.title }}</span></a>
-          </li>
           <li class="masthead__menu-item masthead__nav-cluster">
             <ul class="masthead__nav-cluster-list">
+              <li class="masthead__menu-item masthead__nav-link {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
+                <a href="{{ base_path }}/"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}><i class="fa-solid fa-house masthead__nav-icon" aria-hidden="true"></i><span>Home</span></a>
+              </li>
               {% for link in site.data.navigation.main %}
                 {% if link.url contains 'http' %}
                   {% assign domain = '' %}
@@ -23,13 +23,6 @@
           </li>
         </ul>
         <div class="mobile-nav-row">
-          <div class="mobile-nav-left">
-            <a
-              href="{{ base_path }}/"
-              class="mobile-nav-brand"
-              {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}
-            ><i class="fa-solid fa-house masthead__nav-icon" aria-hidden="true"></i><span>{{ site.title }}</span></a>
-          </div>
           <div class="mobile-nav-right">
             <div id="theme-toggle" class="masthead__menu-item masthead__theme">
               <a role="button" aria-label="Toggle dark mode" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
@@ -59,5 +52,65 @@
 
     icon.classList.toggle("fa-sun", !isDark);
     icon.classList.toggle("fa-moon", isDark);
+  })();
+
+  (function () {
+    var nav = document.querySelector(".masthead__nav-cluster-list");
+    var active = nav && nav.querySelector(".masthead__nav-link.selected > a");
+    var desktop = window.matchMedia("(min-width: 924px)");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var navigating = false;
+
+    if (!nav || !active) {
+      return;
+    }
+
+    function placeSlider(link) {
+      var navRect = nav.getBoundingClientRect();
+      var linkRect = link.getBoundingClientRect();
+
+      nav.style.setProperty("--nav-slider-left", linkRect.left - navRect.left + "px");
+      nav.style.setProperty("--nav-slider-top", "0px");
+      nav.style.setProperty("--nav-slider-width", linkRect.width + "px");
+      nav.style.setProperty("--nav-slider-height", navRect.height + "px");
+      nav.style.setProperty("--nav-slider-radius", window.getComputedStyle(link).borderRadius);
+    }
+
+    function initialiseSlider() {
+      nav.classList.remove("nav-slider-ready");
+
+      if (!desktop.matches) {
+        return;
+      }
+
+      placeSlider(active);
+      window.requestAnimationFrame(function () {
+        nav.classList.add("nav-slider-ready");
+      });
+    }
+
+    nav.querySelectorAll(".masthead__nav-link > a").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        if (!desktop.matches || reducedMotion.matches || navigating || link === active || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+          return;
+        }
+
+        event.preventDefault();
+        navigating = true;
+        nav.classList.add("is-sliding");
+        active.parentElement.classList.add("is-slide-source");
+        link.parentElement.classList.add("is-slide-target");
+        placeSlider(link);
+
+        window.setTimeout(function () {
+          window.location.assign(link.href);
+        }, 320);
+      });
+    });
+
+    initialiseSlider();
+    window.addEventListener("resize", function () {
+      window.requestAnimationFrame(initialiseSlider);
+    });
   })();
 </script>

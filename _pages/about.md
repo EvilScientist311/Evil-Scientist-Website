@@ -75,7 +75,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Education</span>
           <h3 class="home-timeline__title">Electrical Engineering (Honours) and Physics, UNSW</h3>
-          <p class="home-timeline__desc">Honours in Electrical Engineering and a Bachelor of Science in Physics at UNSW.</p>
+          <p class="home-timeline__desc">Graduated with a Bachelor of Engineering (Honours) in Electrical Engineering and a Bachelor of Science in Physics from UNSW, achieving a Distinction average.</p>
         </article>
       </li>
       <li class="home-timeline__item">
