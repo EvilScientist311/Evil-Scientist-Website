@@ -1,10 +1,6 @@
 (function () {
   "use strict";
 
-  if (document.body.getAttribute("data-page") !== "home") {
-    return;
-  }
-
   var prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
