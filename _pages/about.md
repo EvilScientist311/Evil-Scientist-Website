@@ -64,7 +64,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Research</span>
           <h3 class="home-timeline__title">Quantum Backscatter Communications — Honours Thesis</h3>
-          <p class="home-timeline__desc">Thesis: <em>Modulation Design for Quantum Backscatter Communications: Performance Analysis and Optimisation</em>. Research findings submitted to IEEE GLOBECOM 2026 (Quantum Communications and IT Symposium).</p>
+          <p class="home-timeline__desc">Thesis: <em>Modulation Design for Quantum Backscatter Communications: Performance Analysis and Optimisation</em>. Awarded a High Distinction for the research. Research findings submitted to IEEE GLOBECOM 2026 (Quantum Communications and IT Symposium).</p>
           <p class="home-timeline__desc home-timeline__desc--separated"><strong><u>Description:</u></strong><br>Developed a more realistic bit-error-rate model for polarisation-encoded QBC beyond the ideal thermal-bath assumption. Derived and numerically validated analytical models for polarisation rotation, temporal misalignment and pointing jitter, combined them into a unified impairment framework, and optimised pulse width and signal brightness under data-rate and resource constraints. The results identified rotation and pointing jitter as the dominant impairments in the baseline regime and established robust operating regions for practical system design.</p>
           <a class="home-timeline__link" href="{{ '/files/papers/qbc-paper.pdf' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i>Read QBC paper</a>
         </article>
