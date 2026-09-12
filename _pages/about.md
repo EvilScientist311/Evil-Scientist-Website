@@ -115,12 +115,12 @@ header:
         </article>
       </li>
       <li class="home-timeline__item">
-        <p class="home-timeline__year">2023–2024</p>
+        <p class="home-timeline__year">2023</p>
         <div class="home-timeline__node" aria-hidden="true"><span class="home-timeline__node-dot"></span></div>
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Leadership</span>
           <h3 class="home-timeline__title">Student Fellow at UNSW Hall</h3>
-          <p class="home-timeline__desc">Mentored residents, supported college events, and helped coordinate residential community life.</p>
+          <p class="home-timeline__desc">Selected as one of two Student Fellows for 2023. Led and mentored a residential floor community, held weekly floor meetings, attended residential staff and house meetings, and helped coordinate and supervise college activities and events. Served as a link between residents and college leadership, raising concerns appropriately, maintaining confidentiality, and modelling college values.</p>
         </article>
       </li>
       <li class="home-timeline__item">
@@ -129,7 +129,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Leadership</span>
           <h3 class="home-timeline__title">Operations and Communications Director, UNSW Hall</h3>
-          <p class="home-timeline__desc">Organised events, created multimedia advertisements, and managed social platforms.</p>
+          <p class="home-timeline__desc">Helped lead UNSW Hall's operations and communications portfolio as a member of the House Committee. Produced internal publications and advertising, developed and maintained digital communication platforms, documented major college events through photography, and created approved visual content for other directors. Also supported the upkeep and availability of college services and amenities.</p>
         </article>
       </li>
       <li class="home-timeline__item">
@@ -138,7 +138,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Teaching</span>
           <h3 class="home-timeline__title">Piano Teacher</h3>
-          <p class="home-timeline__desc">Gave weekly piano lessons to students aged 7 to 27.</p>
+          <p class="home-timeline__desc">Gave weekly piano lessons to students aged 7 to 27, adapting repertoire, exercises, explanations, and lesson pacing to different ages and ability levels. Developed students' technique, sight-reading, rhythm, musical interpretation, practice habits, confidence, and ability to learn independently.</p>
         </article>
       </li>
     </ol>
