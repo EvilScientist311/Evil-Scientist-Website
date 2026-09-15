@@ -173,7 +173,7 @@ body {
   .page__hero--overlay {
     display: flex;
     align-items: center;
-    min-height: 21rem;
+    min-height: clamp(15rem, 24vw, 21rem);
     box-sizing: border-box;
   }
 }
@@ -1196,7 +1196,7 @@ $mobile-sidebar-breakpoint: 924px;
 /* Hero text — smaller on non-home pages with banners */
 @media screen and (max-width: $mobile-nav-breakpoint - 1px) {
   body:not([data-page="home"]) .page__hero--overlay {
-    padding: 2rem 0;
+    padding: clamp(1.2rem, 5vw, 2rem) 0;
 
     .page__title {
       font-size: clamp(1.55rem, 7.5vw, 2rem);
