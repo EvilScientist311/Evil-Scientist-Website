@@ -7,7 +7,7 @@
 
 <article class="pdf-card">
   <a class="pdf-card__link" href="{{ card_url }}" target="_blank" rel="noopener noreferrer">
-    <h3 class="pdf-card__title">{{ post.title | default: page.title }}</h3>
+    <h2 class="pdf-card__title">{{ post.title | default: page.title }}</h2>
     {% assign card_excerpt = post.excerpt | default: page.excerpt %}
     {% if card_excerpt %}
       <div class="pdf-card__excerpt">{{ card_excerpt | markdownify }}</div>

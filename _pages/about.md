@@ -9,6 +9,8 @@ header:
   overlay_filter: 0.35
 ---
 
+<h1 class="visually-hidden home-mobile-heading">Corey Anderson</h1>
+
 {% assign lab_report_count = site.publications | where: "category", "lab-reports" | size %}
 {% assign physics_notes_count = site.publications | size | minus: lab_report_count %}
 {% assign project_count = site.portfolio | size %}

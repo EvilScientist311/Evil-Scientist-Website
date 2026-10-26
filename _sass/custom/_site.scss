@@ -360,7 +360,12 @@ $page-nav-control-radius: 0.68rem;
   flex-shrink: 0;
   line-height: 1;
 
-  a {
+  button {
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -593,6 +598,7 @@ body.page-not-home #main > .archive {
   z-index: 0;
   margin: 0 0 2.5rem;
   isolation: isolate;
+  overflow-x: clip;
 
   &__heading {
     margin: 0 0 1rem;
@@ -1173,8 +1179,16 @@ $mobile-nav-breakpoint: 768px;
 $mobile-nav-bar-breakpoint: 924px;
 $mobile-sidebar-breakpoint: 924px;
 
+.home-mobile-heading {
+  display: none !important;
+}
+
 /* Homepage — hide hero banner on mobile */
 @media screen and (max-width: $mobile-nav-breakpoint - 1px) {
+  .home-mobile-heading {
+    display: block !important;
+  }
+
   body[data-page="home"] .page__hero--overlay {
     display: none !important;
     margin: 0 !important;
@@ -1706,7 +1720,7 @@ body.mobile-nav-open::before {
     overflow: visible;
   }
 
-  .masthead .greedy-nav .masthead__theme a {
+  .masthead .greedy-nav .masthead__theme button {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -1839,7 +1853,7 @@ body.mobile-nav-open::before {
     align-items: center;
   }
 
-  a[aria-label="Toggle dark mode"] {
+  button[aria-label="Toggle colour theme"] {
     height: 44px;
     width: 44px;
     min-height: 44px;
@@ -1854,7 +1868,7 @@ body.mobile-nav-open::before {
     flex-shrink: 0;
   }
 
-  a[aria-label="Toggle dark mode"] i,
+  button[aria-label="Toggle colour theme"] i,
   #theme-icon {
     display: block;
     line-height: 1;
