@@ -57,7 +57,7 @@ header:
         <article class="home-timeline__card">
           <span class="home-timeline__pill">Internship</span>
           <h3 class="home-timeline__title">Grid-Connection Engineering Internship — Sungrow</h3>
-          <p class="home-timeline__desc">Working on utility-scale grid-connected BESS modelling, harmonic studies and EMT fault analysis using DIgSILENT PowerFactory, PSCAD and Python. Built and validated electrical models from project drawings and equipment data, covering converters, transformers, collector networks, frequency-dependent Norton equivalents, harmonic-current spectra and impedance polygons. Developed automation for AF, HD and CHD studies, reducing an 18-case, 300-point run from 12 hours to approximately 25 minutes while reproducing the existing results. Also configured and ran 840 PSCAD LVRT/HVRT cases across 12 operating-point models and delivered organised outputs for downstream compliance reporting.</p>
+          <p class="home-timeline__desc">Working on utility-scale grid-connected BESS modelling, harmonic studies and EMT fault analysis using DIgSILENT PowerFactory, PSCAD and Python. Built and validated electrical models from project drawings and equipment data, covering converters, transformers, collector networks, frequency-dependent Norton equivalents, harmonic-current spectra and impedance polygons. Developed automation for AF, HD and CHD studies, reducing an 18-case, 300-point run from 12 hours to 25 minutes while reproducing the existing results. Also configured and ran 840 PSCAD LVRT/HVRT cases across 12 operating-point models and delivered organised outputs for downstream compliance reporting.</p>
         </article>
       </li>
       <li class="home-timeline__item">
