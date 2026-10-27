@@ -1,0 +1,63 @@
+---
+layout: default
+title: "Hydrogen Atomic Orbitals"
+permalink: /derivations/hydrogen-orbitals/
+excerpt: "An interactive three-dimensional visualisation of real hydrogen wavefunctions and their probability densities."
+---
+
+<main class="hydrogen-page">
+  <article class="hydrogen-simulation hydrogen-simulation--fullscreen" data-hydrogen-orbital>
+    <div class="hydrogen-simulation__header hydrogen-simulation__header--compact">
+      <div>
+        <nav class="page-back" aria-label="Back navigation">
+          <a class="page-back__link" href="{{ '/derivations/' | relative_url }}"><i class="fas fa-chevron-left" aria-hidden="true"></i> Back to Physics</a>
+        </nav>
+        <h1>Hydrogen Atomic Orbitals</h1>
+      </div>
+
+      <fieldset class="hydrogen-controls">
+        <legend>Quantum numbers</legend>
+        <label>
+          <span><i>n</i></span>
+          <span class="hydrogen-number-field">
+            <input type="number" name="n" value="1" min="1" max="8" step="1" inputmode="numeric" autocomplete="off" />
+            <span class="hydrogen-number-field__buttons">
+              <button type="button" data-step="up" aria-label="Increase n"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+              <button type="button" data-step="down" aria-label="Decrease n"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+            </span>
+          </span>
+        </label>
+        <label>
+          <span><i>l</i></span>
+          <span class="hydrogen-number-field">
+            <input type="number" name="l" value="0" min="0" max="0" step="1" inputmode="numeric" autocomplete="off" />
+            <span class="hydrogen-number-field__buttons">
+              <button type="button" data-step="up" aria-label="Increase l"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+              <button type="button" data-step="down" aria-label="Decrease l"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+            </span>
+          </span>
+        </label>
+        <label>
+          <span><i>m</i></span>
+          <span class="hydrogen-number-field">
+            <input type="number" name="m" value="0" min="0" max="0" step="1" inputmode="numeric" autocomplete="off" />
+            <span class="hydrogen-number-field__buttons">
+              <button type="button" data-step="up" aria-label="Increase m"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+              <button type="button" data-step="down" aria-label="Decrease m"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+            </span>
+          </span>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="hydrogen-formula hydrogen-formula--standalone">
+      <div class="hydrogen-formula__math" aria-live="polite">\[\psi_{100}(r,\theta,\phi)=\frac{e^{-r/a_0}}{\sqrt{\pi}\,a_0^{3/2}}\]</div>
+    </div>
+
+    <div class="hydrogen-viewport">
+      <canvas class="hydrogen-viewport__canvas" tabindex="0" aria-label="Interactive three-dimensional hydrogen orbital probability cloud"></canvas>
+      <div class="hydrogen-viewport__interaction" aria-hidden="true"><i class="fa-solid fa-hand-pointer"></i><span>Drag to rotate</span></div>
+      <div class="hydrogen-viewport__status" role="status" aria-live="polite">Generating 40,000 particles…</div>
+    </div>
+  </article>
+</main>

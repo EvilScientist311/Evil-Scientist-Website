@@ -8,12 +8,40 @@ header:
   overlay_filter: 0.35
 ---
 
+<section class="hydrogen-simulation-section" aria-labelledby="interactive-simulations-title">
+  <div class="physics-section-heading">
+    <h2 id="interactive-simulations-title">Interactive Simulations</h2>
+    <p>Explore physical systems through interactive visualisations.</p>
+  </div>
+
+  <div class="simulation-cards">
+    <article class="simulation-card">
+      <a class="simulation-card__link" href="{{ '/derivations/hydrogen-orbitals/' | relative_url }}">
+        <div class="simulation-card__media">
+          <img src="{{ '/images/img/hydrogen-orbital-preview.jpg' | relative_url }}" alt="Hydrogen orbital probability cloud" loading="lazy" />
+          <span class="simulation-card__badge"><i class="fa-solid fa-cube" aria-hidden="true"></i> Interactive 3D</span>
+        </div>
+        <div class="simulation-card__body">
+          <h3>Hydrogen Atomic Orbitals</h3>
+          <p>Choose <i>n</i>, <i>l</i> and <i>m</i> to explore real hydrogen wavefunctions as rotating probability-density clouds.</p>
+          <span class="simulation-card__action">Open simulation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+    </article>
+  </div>
+</section>
+
+<section class="physics-papers" aria-labelledby="physics-papers-title">
+  <div class="physics-section-heading physics-section-heading--papers">
+    <h2 id="physics-papers-title">Physics Papers and Notes</h2>
+  </div>
+
 <div class="topic-cards">
   <article class="topic-card">
     <a class="topic-card__link" href="{{ '/derivations/quantum-mechanics/' | relative_url }}">
       <img class="topic-card__image" src="{{ '/images/img/qm.jpg' | relative_url }}" alt="Quantum Mechanics" loading="lazy" />
       <div class="topic-card__body">
-        <h2 class="topic-card__title">Quantum Mechanics</h2>
+        <h3 class="topic-card__title">Quantum Mechanics</h3>
         <p class="topic-card__text">The study of matter and energy at the atomic and subatomic scale. Covers wave-particle duality, uncertainty principle, quantum states, and fundamental particle interactions.</p>
       </div>
     </a>
@@ -23,7 +51,7 @@ header:
     <a class="topic-card__link" href="{{ '/derivations/optics/' | relative_url }}">
       <img class="topic-card__image" src="{{ '/images/img/optics.jpg' | relative_url }}" alt="Optics" loading="lazy" />
       <div class="topic-card__body">
-        <h2 class="topic-card__title">Optics</h2>
+        <h3 class="topic-card__title">Optics</h3>
         <p class="topic-card__text">The branch of physics dealing with light behaviour and properties. Includes geometric optics, wave optics, and electromagnetic theory of light propagation.</p>
       </div>
     </a>
@@ -33,7 +61,7 @@ header:
     <a class="topic-card__link" href="{{ '/derivations/mechanics/' | relative_url }}">
       <img class="topic-card__image" src="{{ '/images/img/mechanics.jpg' | relative_url }}" alt="Mechanics" loading="lazy" />
       <div class="topic-card__body">
-        <h2 class="topic-card__title">Mechanics</h2>
+        <h3 class="topic-card__title">Mechanics</h3>
         <p class="topic-card__text">The study of motion, forces, and energy in physical systems. Encompasses classical mechanics, fluid dynamics, and the principles of conservation.</p>
       </div>
     </a>
@@ -43,7 +71,7 @@ header:
     <a class="topic-card__link" href="{{ '/derivations/electromagnetism/' | relative_url }}">
       <img class="topic-card__image" src="{{ '/images/img/em.jpg' | relative_url }}" alt="Electromagnetism" loading="lazy" />
       <div class="topic-card__body">
-        <h2 class="topic-card__title">Electromagnetism</h2>
+        <h3 class="topic-card__title">Electromagnetism</h3>
         <p class="topic-card__text">Study of electric and magnetic fields and their interactions. Covers Maxwell's equations, electromagnetic waves, and charged particle behavior.</p>
       </div>
     </a>
@@ -53,7 +81,7 @@ header:
     <a class="topic-card__link" href="{{ '/derivations/relativity/' | relative_url }}">
       <img class="topic-card__image" src="{{ '/images/img/relativity.jpg' | relative_url }}" alt="Relativity" loading="lazy" />
       <div class="topic-card__body">
-        <h2 class="topic-card__title">Relativity</h2>
+        <h3 class="topic-card__title">Relativity</h3>
         <p class="topic-card__text">Einstein's theories of special and general relativity. Explores spacetime, gravity as curved geometry, and the relationship between mass and energy.</p>
       </div>
     </a>
@@ -63,9 +91,10 @@ header:
     <a class="topic-card__link" href="{{ '/derivations/mathematics/' | relative_url }}">
       <img class="topic-card__image" src="{{ '/images/img/maths.jpg' | relative_url }}" alt="Mathematics" loading="lazy" />
       <div class="topic-card__body">
-        <h2 class="topic-card__title">Mathematics</h2>
+        <h3 class="topic-card__title">Mathematics</h3>
         <p class="topic-card__text">Mathematical techniques and proofs essential for physics. Includes calculus, differential equations, linear algebra, and complex analysis applications.</p>
       </div>
     </a>
   </article>
 </div>
+</section>
