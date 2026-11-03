@@ -14,44 +14,61 @@ excerpt: "An interactive three-dimensional visualisation of real hydrogen wavefu
         </nav>
         <h1>Hydrogen Atomic Orbitals</h1>
       </div>
-
-      <fieldset class="hydrogen-controls">
-        <legend>Quantum numbers</legend>
-        <label>
-          <span><i>n</i></span>
-          <span class="hydrogen-number-field">
-            <input type="number" name="n" value="1" min="1" max="8" step="1" inputmode="numeric" autocomplete="off" />
-            <span class="hydrogen-number-field__buttons">
-              <button type="button" data-step="up" aria-label="Increase n"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
-              <button type="button" data-step="down" aria-label="Decrease n"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-            </span>
-          </span>
-        </label>
-        <label>
-          <span><i>l</i></span>
-          <span class="hydrogen-number-field">
-            <input type="number" name="l" value="0" min="0" max="0" step="1" inputmode="numeric" autocomplete="off" />
-            <span class="hydrogen-number-field__buttons">
-              <button type="button" data-step="up" aria-label="Increase l"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
-              <button type="button" data-step="down" aria-label="Decrease l"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-            </span>
-          </span>
-        </label>
-        <label>
-          <span><i>m</i></span>
-          <span class="hydrogen-number-field">
-            <input type="number" name="m" value="0" min="0" max="0" step="1" inputmode="numeric" autocomplete="off" />
-            <span class="hydrogen-number-field__buttons">
-              <button type="button" data-step="up" aria-label="Increase m"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
-              <button type="button" data-step="down" aria-label="Decrease m"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-            </span>
-          </span>
-        </label>
-      </fieldset>
     </div>
 
-    <div class="hydrogen-formula hydrogen-formula--standalone">
-      <div class="hydrogen-formula__math" aria-live="polite">\[\psi_{100}(r,\theta,\phi)=\frac{e^{-r/a_0}}{\sqrt{\pi}\,a_0^{3/2}}\]</div>
+    <section class="hydrogen-concept" aria-labelledby="hydrogen-concept-title">
+      <h2 id="hydrogen-concept-title">The Hydrogen Atom</h2>
+      <p>In quantum mechanics, the electron in a hydrogen atom is described by a wavefunction, \(\psi_{nlm}(r,\theta,\phi)\), rather than a definite classical orbit around the nucleus. The squared magnitude of the wavefunction, \(|\psi_{nlm}|^2\), gives the probability density for detecting the electron at a particular position. An atomic orbital is the three-dimensional spatial structure of this probability distribution. Regions where the wavefunction is zero are called nodes.</p>
+      <p>The principal quantum number follows \(n=1,2,3,\ldots\). It determines the electron’s energy level and the overall radial extent of the orbital.</p>
+      <p>For each \(n\), the orbital quantum number follows \(l=0,1,\ldots,n-1\). It determines the magnitude of the orbital angular momentum and the general orbital shape. The values \(l=0,1,2,3\) correspond to the \(s\), \(p\), \(d\), and \(f\) orbitals.</p>
+      <p>For each \(l\), the magnetic quantum number follows \(m=-l,-l+1,\ldots,0,\ldots,l-1,l\). It determines the projection of orbital angular momentum along a chosen axis. There are \(2l+1\) allowed values of \(m\) for each value of \(l\).</p>
+      <p>Only combinations of \(n\), \(l\), and \(m\) that satisfy these rules represent valid hydrogen states.</p>
+    </section>
+
+    <div class="hydrogen-controls-panel">
+      <div class="hydrogen-controls-panel__inputs">
+        <span class="hydrogen-controls-panel__label" aria-hidden="true">Quantum numbers</span>
+        <fieldset class="hydrogen-controls">
+          <legend>Quantum numbers</legend>
+          <label>
+            <span><i>n</i></span>
+            <span class="hydrogen-number-field">
+              <input type="number" name="n" value="1" min="1" max="8" step="1" inputmode="numeric" autocomplete="off" />
+              <span class="hydrogen-number-field__buttons">
+                <button type="button" data-step="up" aria-label="Increase n"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+                <button type="button" data-step="down" aria-label="Decrease n"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              </span>
+            </span>
+          </label>
+          <label>
+            <span><i>l</i></span>
+            <span class="hydrogen-number-field">
+              <input type="number" name="l" value="0" min="0" max="0" step="1" inputmode="numeric" autocomplete="off" />
+              <span class="hydrogen-number-field__buttons">
+                <button type="button" data-step="up" aria-label="Increase l"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+                <button type="button" data-step="down" aria-label="Decrease l"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              </span>
+            </span>
+          </label>
+          <label>
+            <span><i>m</i></span>
+            <span class="hydrogen-number-field">
+              <input type="number" name="m" value="0" min="0" max="0" step="1" inputmode="numeric" autocomplete="off" />
+              <span class="hydrogen-number-field__buttons">
+                <button type="button" data-step="up" aria-label="Increase m"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+                <button type="button" data-step="down" aria-label="Decrease m"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="hydrogen-controls-panel__formula">
+        <span class="hydrogen-controls-panel__label" aria-hidden="true">Wavefunction</span>
+        <div class="hydrogen-formula hydrogen-formula--standalone">
+          <div class="hydrogen-formula__math" aria-live="polite">\[\psi_{100}(r,\theta,\phi)=\frac{e^{-r/a_0}}{\sqrt{\pi}\,a_0^{3/2}}\]</div>
+        </div>
+      </div>
     </div>
 
     <div class="hydrogen-viewport">
